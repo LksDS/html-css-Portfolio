@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    height: 60px;
+    background-color: white;
+}
+body{
+    background-color: black;
+}
+#sidebar-btn{
+    position: relative;
+    top: 50%;
+    transform: translate(-150%,-50%);
+    left: 100%;
+    border: 1px solid rgb(117, 117, 117);
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+#sidebar-btn>svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    fill: rgb(116, 116, 116);
+    height: 30px;
+}

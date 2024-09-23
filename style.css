@@ -3,12 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+.play-font{
+    font-family: "Play", sans-serif;
+}
 header{
     height: 60px;
     background-color: white;
 }
 body{
-    background-color: black;
+    background-color: lightgray;
+    background-image: url(images/download.png);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
 }
 #sidebar-btn{
     position: relative;
@@ -27,4 +34,38 @@ body{
     transform: translate(-50%,-50%);
     fill: rgb(116, 116, 116);
     height: 30px;
+}
+#apresentacao *{
+    color: #8F45DE;
+    font-weight: 400;
+    line-height: 40px;
+}
+#apresentacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 45vh;
+    background-color: rgba(0, 255, 0, 0.5);
+    padding-bottom: 30px;
+}
+#apresentacao h1{
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+#apresentacao h2{
+    font-size: 2.5em;
+}
+#apresentacao h3{
+    font-size: 1.2  em;
+}
+section h2{
+    color: #89ADD7;    
+    text-shadow: .5px .5px 1px #FFFFFF;
+    text-align: center;
+}
+#projects{
+    background: rgb(55,42,122);
+    background: linear-gradient(180deg, rgba(55,42,122,1) 0%, rgba(83,64,186,1) 29%, rgba(101,77,224,1) 90%, rgba(92,70,205,1) 100%);
 }

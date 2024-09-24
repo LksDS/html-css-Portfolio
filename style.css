@@ -16,6 +16,7 @@ body{
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
+    font-family: 'Poppins',sans-serif;
 }
 #sidebar-btn{
     position: relative;
@@ -46,7 +47,6 @@ body{
     justify-content: end;
     align-items: center;
     height: 45vh;
-    background-color: rgba(0, 255, 0, 0.5);
     padding-bottom: 30px;
 }
 #apresentacao h1{
@@ -58,14 +58,79 @@ body{
     font-size: 2.5em;
 }
 #apresentacao h3{
-    font-size: 1.2  em;
+    font-size: 1.2em;
 }
 section h2{
+    font-size: 2em;
     color: #89ADD7;    
     text-shadow: .5px .5px 1px #FFFFFF;
     text-align: center;
+    margin-bottom: 30px;
 }
 #projects{
-    background: rgb(55,42,122);
     background: linear-gradient(180deg, rgba(55,42,122,1) 0%, rgba(83,64,186,1) 29%, rgba(101,77,224,1) 90%, rgba(92,70,205,1) 100%);
 }
+section{
+    padding-top: 40px;
+    padding-bottom: 1px;
+}
+.container-projeto{
+    width: 90%;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 13px;
+    display: flex;
+    height: 120px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.container-projeto .foto{
+    width: 120px;
+    object-fit: cover;
+}
+.container-projeto .container-informacoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    padding: 15px 30px;
+}
+.container-projeto .descricao{
+    text-align: justify;
+    font-size: .9em;
+}
+.container-informacoes .nome:hover::after{
+   width: 100%;
+}
+.container-informacoes .nome::after{
+    content: "";
+    width: 0;
+    border-bottom: 1px solid black;
+    position: absolute;
+    height: 20px;
+    left: 50%;
+    transform: translate(-50%,0);
+    transition: width 1s;
+}
+.container-informacoes .nome{
+    width: fit-content;
+    position: relative;
+    color: #8F45DE;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+#coming-soon{
+    display: none;
+}
+.elemento-animado {
+    position: relative;
+    top: 50px;
+    opacity: 0;
+    transition: opacity .5s, top .5s;
+  }
+  .elemento-animado.visible {
+    top: 0;
+    opacity: 1;
+  }

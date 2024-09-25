@@ -83,6 +83,7 @@ section{
     height: 120px;
     margin: auto;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 .container-projeto .foto{
     width: 120px;
@@ -99,13 +100,14 @@ section{
     text-align: justify;
     font-size: .9em;
 }
-.container-informacoes .nome:hover::after{
+.container-projeto:hover .container-informacoes .nome::after{
    width: 100%;
+   cursor: pointer;
 }
-.container-informacoes .nome::after{
+.container-projeto .container-informacoes .nome::after{
     content: "";
     width: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #8F45DE;
     position: absolute;
     height: 20px;
     left: 50%;
@@ -124,6 +126,12 @@ section{
 #coming-soon{
     display: none;
 }
+
+#technologies{
+    background: rgb(92,70,205);
+background: linear-gradient(180deg, rgba(92,70,205,1) 0%, rgba(101,77,224,1) 29%, rgba(83,64,186,1) 58%, rgba(55,42,122,1) 100%);
+}
+
 .elemento-animado {
     position: relative;
     top: 50px;
@@ -134,3 +142,23 @@ section{
     top: 0;
     opacity: 1;
   }
+  #container-tecnologias{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tecnologia{
+    flex-grow: 1;
+    min-width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  .tecnologia
+   .tecnologia-logo{
+    height: 60px;
+    
+   }
+   .tecnologia
+   .tecnologia-logo path{
+    fill: radial-gradient(circle, rgba(137,173,215,1) 0%, rgba(143,69,222,1) 100%)
+   }

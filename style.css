@@ -112,7 +112,7 @@ section{
     height: 20px;
     left: 50%;
     transform: translate(-50%,0);
-    transition: width 1s;
+    transition: width .5s;
 }
 .container-informacoes .nome{
     width: fit-content;
@@ -149,16 +149,102 @@ background: linear-gradient(180deg, rgba(92,70,205,1) 0%, rgba(101,77,224,1) 29%
   .tecnologia{
     flex-grow: 1;
     min-width: 200px;
-    height: 100px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
   }
   .tecnologia
    .tecnologia-logo{
-    height: 60px;
-    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 70%;
+    transform: translate(-50%,-50%);
+
    }
    .tecnologia
-   .tecnologia-logo path{
-    fill: radial-gradient(circle, rgba(137,173,215,1) 0%, rgba(143,69,222,1) 100%)
+   .img-container{
+        position: relative;
+        aspect-ratio: 1/1;
+        width: 40%;
+        margin-bottom: 20px;
+   }
+   .tecnologia
+   .img-container::after{
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-image: linear-gradient(225deg, rgba(137,173,215,1) 0%, rgba(143,69,222,1) 100%);
+    border-image-slice: 1;
+    padding: 20px;
+    transition: ease-in-out .5s;
+    transform-origin: center;
+   }
+   .tecnologia
+   .img-container:hover{
+    cursor: pointer;
+   }
+   .tecnologia
+   .img-container:hover::after{
+    transform: rotate(45deg) ; /* notice the order */
+   }
+   .tecnologia
+   span{
+        position: relative;
+        font-family: 'Play',sans-serif;
+        font-weight: bold;
+        color: white;
+        font-size: 18px;
+   }
+   .tecnologia
+   .span-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 70px;
+   }
+   .tecnologia
+   .span-container::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 30%;
+        border-top: 1px solid transparent;
+        border-left: 1px solid transparent;
+        border-image: linear-gradient(225deg, rgba(137,173,215,1) 0%, rgba(143,69,222,1) 100%);
+        border-image-slice: 1;
+        transition: ease-in-out .5s;
+   }
+   .tecnologia
+   .span-container::before{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 30%;
+        height: 30%;
+        border-right: 1px solid transparent;    
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(225deg, rgba(137,173,215,1) 0%, rgba(143,69,222,1) 100%);
+        border-image-slice: 1;
+        transition: ease-in-out .5s;
+   }
+   .tecnologia
+   .span-container:hover{
+    cursor: pointer;
+   }
+   .tecnologia
+   .span-container:hover::after, .span-container:hover:before{
+
+    width: 98.7%;
+    height: 95%;
    }

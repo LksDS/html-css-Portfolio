@@ -17,3 +17,7 @@ const observer = new IntersectionObserver((entries) => {
     observer.takeRecords();
     
   });
+
+  function togglesidebar(){
+    $("#sidebar").toggleClass("mostrar")
+  }

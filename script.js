@@ -21,3 +21,4 @@ const observer = new IntersectionObserver((entries) => {
   function togglesidebar(){
     $("#sidebar").toggleClass("mostrar")
   }
+  $("#input-modo-claro-escuro").css()

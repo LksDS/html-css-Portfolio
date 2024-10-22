@@ -21,4 +21,15 @@ const observer = new IntersectionObserver((entries) => {
   function togglesidebar(){
     $("#sidebar").toggleClass("mostrar")
   }
-  $("#input-modo-claro-escuro").css()
+  function toggleDarkLightMode(){
+    $("body").toggleClass("darkmode");
+    $("#input-modo-claro-escuro").toggleClass("darkmodeon");
+    $("section").toggleClass("darkmode")
+  }
+  $("#input-modo-claro-escuro").click(function(){
+      toggleDarkLightMode();
+  });
+  $(".nav-anchor").click(function(){
+    console.log("a");
+    togglesidebar()
+  });

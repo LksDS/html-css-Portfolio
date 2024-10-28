@@ -33,3 +33,5 @@ const observer = new IntersectionObserver((entries) => {
     console.log("a");
     togglesidebar()
   });
+
+  

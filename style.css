@@ -39,8 +39,11 @@ header{
     width: 100%;
     left: 0;
     height: 60px;
-    background-color: white;
+    background-color: inherit;
     z-index: 99;
+}
+nav{
+    display: none;
 }
 #body{
     background-color: lightgray;
@@ -126,7 +129,7 @@ header{
     background-color: white !important;
 }
 
-#input-modo-claro-escuro{
+.input-modo-claro-escuro{
     cursor: pointer;
     margin-left: 30px;
     height: 30px;
@@ -135,7 +138,7 @@ header{
     border-radius: 30px;
     position: relative;
 }
-#input-modo-claro-escuro.darkmodeon #bolinha{
+.input-modo-claro-escuro.darkmodeon #bolinha{
     background-color: black;
     left: 100%;
     transform: translate(-100%,0);
@@ -189,7 +192,7 @@ body:has(.darkmode) section {
     color: currentColor !important;
 }
 body:has(.darkmode) div.container-informacoes{
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(27, 27, 27) !important;
 }
 section{
     padding-top: 40px;
@@ -407,7 +410,7 @@ grid-auto-columns: 50px 2fr 1fr;
 #about h2{
     grid-column: 1/3;
 }
-#foto-pc-size{
+#img-pc-size{
     display: none;
 }
 #texto-sobre{
@@ -547,13 +550,176 @@ button:hover {
     }
 }
 @media (min-width: 1024px) {
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav div{
+        width: 250px;
+    }
+    nav ul{
+        margin-right: 20px;
+        width: 100%;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+    }
+    nav ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .2s ease-in-out;
+    }
+    nav h3{
+        font-size: 14px;
+    }
+    nav ul li:hover{
+        color: #8F45DE;
+    }
+    #sidebar-btn{
+        display: none;
+    }
     #coming-soon{
         display: flex;
+        background: url(images/download.png);
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     #projetos-flexbox{
         display: flex;
     }
-    .container-projeto{
-
+    #projetos-flexbox{
+        overflow: hidden;
+        margin: auto;
+        width: 80%;
+        max-width: 1024px;
+        height: 400px;
     }
+    .container-projeto{
+        width: 0;
+        height: 400px;
+        margin: 2px;
+        flex-grow: 1;
+        transition: .5s ease-in-out;
+    }
+    .container-informacoes{
+        background-color: white !important;
+        padding: 0 !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        height: fit-content;
+        flex-grow: 0 !important;
+    }
+    .container-projeto .nome{
+        writing-mode: vertical-rl;
+        text-align: center;
+    }
+    /* Projetos */
+    #projeto-sitedelivery{
+        background: url(images/foto-projeto-sitedelivery.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .hexagon{
+        justify-self: end;
+        width: 200px;
+        height: 200px;
+        clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+        overflow: hidden;
+    }
+    .hexagon img {
+        width: 100%;
+        height: 100%;
+    }
+    #texto-sobre{
+        grid-column: 2;
+        width: 83%;
+    }
+    #projeto-oganitemplate{
+        background: url(images/foto-projeto-oganitemplate.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #projeto-elitphoto{
+        background: url(images/foto-projeto-elitphoto.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #projeto-tabelaperiodica{
+        background: url(images/foto-projeto-tabelaperiodica.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #projeto-horariodeaula{
+        background: url(images/foto-projeto-horariodeaula.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .container-projeto .nome::after{
+        display: none;
+    }
+    .container-projeto .descricao{
+        display: none;
+    }
+    .container-projeto:hover{
+        flex-grow: 7;
+        
+    }
+    .container-projeto:hover .container-informacoes{
+        padding: 20px !important;
+        width: 100%;
+    }
+    .container-projeto:hover .nome{
+        writing-mode: horizontal-tb;
+    }
+    .container-projeto:hover .descricao{
+        display: block;
+    }
+    .container-projeto img{
+        display: none;
+    }
+    .hex-img{
+  width:100%;
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+.hex-img img{
+  max-height:100%;
+}
+.hex-hide{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;left:0;
+}
+.hex-hide:before{
+  content:"";
+  position:absolute;
+  width:0;height:0;
+  border:80px solid transparent;
+  border-bottom:0px solid #fff;
+  border-left:145px solid #fff;
+  bottom:0;
+  left:0;
+  z-index:9999;
+}
+.hex-hide:after{
+  content:"";
+  position:absolute;
+  width:0;height:0;
+  border:80px solid transparent;
+  border-bottom:0px solid #fff;
+  border-right:145px solid #fff;
+  bottom:0;
+  right:0;
+  z-index:9999;
+}
+
+  #img-pc-size{
+    display: block;
+  }
+  #img-mobile-size{
+    display: none !important;
+  }
 }

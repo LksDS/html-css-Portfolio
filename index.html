@@ -25,7 +25,7 @@
             <li><a href="#contact" class="nav-anchor">Contact</a></li>
         </ul>
         <h3>Modo Claro/Escuro</h3>
-        <div id="input-modo-claro-escuro">
+        <div class="input-modo-claro-escuro">
             <div id="bolinha"></div>
         </div>
     </div>
@@ -33,6 +33,22 @@
         <div id = "sidebar-btn" onclick="togglesidebar()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
         </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div>
+                <h3>Modo Claro/Escuro</h3>
+                <div class="input-modo-claro-escuro">
+                    <div id="bolinha"></div>
+                </div>
+            </div>
+        </nav>
     </header>
     <div id="home">
         <h2 class="play-font">Hello, i'm</h2>
@@ -42,35 +58,35 @@
     <section id="projects">
         <h2>MY PROJECTS</h2>
         <article id="projetos-flexbox">
-            <a href="" class="container-projeto elemento-animado" >
+            <a href="" class="container-projeto elemento-animado" id="projeto-oganitemplate">
                 <img class="foto" src="images/download.png" alt="">
                 <div class="container-informacoes">
                     <span class="nome">Ogani Template</span>
                     <p class="descricao">Um projeto de recriar o site Ogani-Template e seus recursos</p>
                 </div>
             </a>
-            <a href="" class="container-projeto elemento-animado" >
+            <a href="" class="container-projeto elemento-animado" id="projeto-sitedelivery">
                 <img class="foto" src="images/download.png" alt="">
                 <div class="container-informacoes">
                     <span class="nome">Site Delivery</span>
                     <p class="descricao">Um projeto de recriar um site de delivery que criei no Figma em forma de site</p>
                 </div>
             </a>
-            <a href="" class="container-projeto elemento-animado" >
+            <a href="" class="container-projeto elemento-animado" id="projeto-elitphoto">
                 <img class="foto" src="images/download.png" alt="">
                 <div class="container-informacoes">
                     <span class="nome">Elit Photo</span>
                     <p class="descricao">Um projeto de recriar o site Elit Photo e seus recursos</p>
                 </div>
             </a>
-            <a href="" class="container-projeto elemento-animado" >
+            <a href="" class="container-projeto elemento-animado" id="projeto-tabelaperiodica">
                 <img class="foto" src="images/download.png" alt="">
                 <div class="container-informacoes">
                     <span class="nome">Tabela Periódica</span>
                     <p class="descricao">Um projeto de recriar a tabela periódica em forma de site</p>
                 </div>
             </a>
-            <a href="" class="container-projeto elemento-animado" >
+            <a href="" class="container-projeto elemento-animado" id="projeto-horariodeaula">
                 <img class="foto" src="images/download.png" alt="">
                 <div class="container-informacoes">
                     <span class="nome">Horário de Aula</span>
@@ -137,7 +153,10 @@
     </section>
     <section id="about">
         <h2>About Me</h2>
-        <img id="foto-pc-size" src="images/download.png" alt="">
+        <div id="img-pc-size" class="hexagon">
+            <img src="images/download.png" alt="">
+        </div>
+
         <div class="elemento-animado" id="texto-sobre">
             <h3>Lucas Diniz</h3>
             <img id="img-mobile-size" src="images/download.png" alt="">

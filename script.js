@@ -23,10 +23,10 @@ const observer = new IntersectionObserver((entries) => {
   }
   function toggleDarkLightMode(){
     $("body").toggleClass("darkmode");
-    $("#input-modo-claro-escuro").toggleClass("darkmodeon");
+    $(".input-modo-claro-escuro").toggleClass("darkmodeon");
     $("section").toggleClass("darkmode")
   }
-  $("#input-modo-claro-escuro").click(function(){
+  $(".input-modo-claro-escuro").click(function(){
       toggleDarkLightMode();
   });
   $(".nav-anchor").click(function(){

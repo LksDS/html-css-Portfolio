@@ -1,3 +1,15 @@
+@keyframes efeito-tecnologia {
+    0%   {
+        transform: scale(1) translate(-50%,-50%);
+    }
+    50%  {
+        transform: scale(0.9) translate(-50%,-50%);
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5)); /* Sombra que segue o contorno */;
+    }
+    100% {
+        transform: scale(1) translate(-50%,-50%);
+    }
+  }
 *{
     margin: 0;
     padding: 0;
@@ -78,6 +90,7 @@ header{
     padding: 10px 30px;
 }
 #sidebar ul li a{
+    display: block;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     text-align: left;
@@ -188,7 +201,7 @@ section{
     overflow: hidden;
     border-radius: 13px;
     display: flex;
-    height: 120px;
+    height: 150px;
     margin: auto;
     margin-bottom: 20px;
     text-decoration: none;
@@ -271,10 +284,15 @@ background: linear-gradient(180deg, rgba(92,70,205,1) 0%, rgba(101,77,224,1) 29%
   left: 50%;
   top: 50%;
   height: 70%;
+  transform-origin: 0;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5)); /* Sombra que segue o contorno */
   transform: translate(-50%,-50%);
+  transition: 1s ease-in-out;
+  
  }
  .tecnologia
  .img-container{
+        cursor: pointer;
       position: relative;
       aspect-ratio: 1/1;
       width: 120px;
@@ -297,12 +315,15 @@ background: linear-gradient(180deg, rgba(92,70,205,1) 0%, rgba(101,77,224,1) 29%
   transform-origin: center;
  }
  .tecnologia
- .img-container:hover{
-  cursor: pointer;
+ .img-container:hover img{
+    animation-name: efeito-tecnologia;
+    animation-duration: 1.7s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
  }
  .tecnologia
  .img-container:hover::after{
-  transform: rotate(45deg) ; /* notice the order */
+  transform: rotate(45deg) ;
  }
  .tecnologia
  span{
@@ -356,6 +377,13 @@ background: linear-gradient(180deg, rgba(92,70,205,1) 0%, rgba(101,77,224,1) 29%
  .tecnologia:has(.span-container:hover) .img-container::after{
       rotate: 45deg;
  }
+ .tecnologia:has(.span-container:hover) .img-container img{
+    animation-name: efeito-tecnologia;
+    animation-duration: 1.7s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+}
+
  .img-container:hover ~ .span-container::after{
   width: 98.7%;
   height: 95%;
@@ -395,6 +423,7 @@ grid-auto-columns: 50px 2fr 1fr;
 }
 #texto-sobre p{
     text-align: justify;
+    color: white;
 }
 #img-mobile-size{
     float: left;
@@ -404,4 +433,127 @@ grid-auto-columns: 50px 2fr 1fr;
     margin-right: 20px;
     border-radius: 18px;
 }
+.carrossel-placeholder{
+    grid-column: 1/3;
+    height: 200px;
+    width: 100%;
+}
+#contact{
+    background: rgb(78,63,128);
+    background: linear-gradient(180deg, rgba(78,63,128,1) 0%, rgba(71,42,122,1) 85%, rgba(0,0,0,1) 100%);
+}
+form {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    padding-bottom: 50px;
+}
+#email-div{
+    grid-column: 1/3;
+}
+#assunto-div{
+    grid-column: 1/3;
+}
+#recado-div{
+    grid-column: 1/3;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 0;
+}
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+}
 
+input, textarea {
+    width: 100%;
+    outline: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 14px;
+    resize: none;
+}
+
+button {
+    grid-column: 1/3;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin: 0 20px 0 20px;
+    
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.footer-div {
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.footer-div h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-div p, .footer-div a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.links-div a {
+    display: block;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+@media (min-width: 600px) {
+    .formdiv-responsiva{
+        grid-column: auto !important;
+    }
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .footer-div {
+        margin-bottom: 0;
+        width: 30%;
+    }
+}
+@media (min-width: 1024px) {
+    #coming-soon{
+        display: flex;
+    }
+    #projetos-flexbox{
+        display: flex;
+    }
+    .container-projeto{
+
+    }
+}

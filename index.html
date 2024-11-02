@@ -21,8 +21,8 @@
             <li><a href="#home" class="nav-anchor">Home</a></li>
             <li><a href="#projects" class="nav-anchor">Projects</a></li>
             <li><a href="#technologies" class="nav-anchor">Technologies</a></li>
-            <li><a href="about" class="nav-anchor">About</a></li>
-            <li><a href="" class="nav-anchor">Contact</a></li>
+            <li><a href="#about" class="nav-anchor">About</a></li>
+            <li><a href="#contact" class="nav-anchor">Contact</a></li>
         </ul>
         <h3>Modo Claro/Escuro</h3>
         <div id="input-modo-claro-escuro">
@@ -41,40 +41,40 @@
     </div>
     <section id="projects">
         <h2>MY PROJECTS</h2>
-        <article>
+        <article id="projetos-flexbox">
             <a href="" class="container-projeto elemento-animado" >
                 <img class="foto" src="images/download.png" alt="">
                 <div class="container-informacoes">
                     <span class="nome">Ogani Template</span>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia interdum aliquam. </p>
+                    <p class="descricao">Um projeto de recriar o site Ogani-Template e seus recursos</p>
                 </div>
             </a>
             <a href="" class="container-projeto elemento-animado" >
                 <img class="foto" src="images/download.png" alt="">
                 <div class="container-informacoes">
                     <span class="nome">Site Delivery</span>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia interdum aliquam. </p>
+                    <p class="descricao">Um projeto de recriar um site de delivery que criei no Figma em forma de site</p>
                 </div>
             </a>
             <a href="" class="container-projeto elemento-animado" >
                 <img class="foto" src="images/download.png" alt="">
                 <div class="container-informacoes">
                     <span class="nome">Elit Photo</span>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia interdum aliquam. </p>
+                    <p class="descricao">Um projeto de recriar o site Elit Photo e seus recursos</p>
                 </div>
             </a>
             <a href="" class="container-projeto elemento-animado" >
                 <img class="foto" src="images/download.png" alt="">
                 <div class="container-informacoes">
                     <span class="nome">Tabela Periódica</span>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia interdum aliquam. </p>
+                    <p class="descricao">Um projeto de recriar a tabela periódica em forma de site</p>
                 </div>
             </a>
             <a href="" class="container-projeto elemento-animado" >
                 <img class="foto" src="images/download.png" alt="">
                 <div class="container-informacoes">
                     <span class="nome">Horário de Aula</span>
-                    <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia interdum aliquam. </p>
+                    <p class="descricao">Um site para apresentar os horários das aula para agilizar o processo de ver as matérias no dia a dia</p>
                 </div>
             </a>
             <a href="" class="container-projeto elemento-animado"  id="coming-soon">
@@ -143,8 +143,53 @@
             <img id="img-mobile-size" src="images/download.png" alt="">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem tellus, pulvinar quis vehicula in, egestas in ligula. Nullam quis leo auctor, auctor nulla eget, suscipit urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem tellus, pulvinar quis vehicula in, egestas in ligula.</p>
         </div>
+        <!-- TODO: Fazer um estilo de carrossel próprio -->
+        <img src="images/carrossel.png" alt="" class="elemento-animado carrossel-placeholder">
     </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="enviar_formulario.php" method="POST" class="elemento-animado">
+            <div id="email-div" class="formdiv-responsiva">
+                <label for="email">E-mail</label>
+                <input placeholder="Digite o seu endereço de e-mail" type="email" id="email" name="email" required>
+            </div>
+            <div id="assunto-div" class="formdiv-responsiva">
+                <label for="assunto">Assunto</label>
+                <input placeholder="Digite o assunto" type="text" id="assunto" name="assunto" required>
+            </div>
+            <div id="recado-div">
+                <label for="recado">Recado</label>
+                <textarea placeholder="Digite o seu recado" id="recado" name="recado" rows="5" required></textarea>
+            </div>
 
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-div">
+            <h2>Sobre</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem tellus Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem tellus</p>
+        </div>
+    
+        <!-- Seção "Links" -->
+        <div class="footer-div links-div">
+            <h2>Links</h2>
+            <a href="#">-> Início</a>
+            <a href="#">-> Projetos</a>
+            <a href="#">-> Tecnologias</a>
+            <a href="#">-> Sobre</a>
+            <a href="#">-> Contato</a>
+        </div>
+    
+        <!-- Seção "Contato" -->
+        <div class="footer-div">
+            <h2>Contato</h2>
+            <p><a href="">Linkedin</a></p>
+            <p>lucasds.032@gmail.com</p>
+            <p>(31) 99197-9678</p>
+            <p>www.domain.com.br</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

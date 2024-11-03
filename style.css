@@ -64,12 +64,24 @@ nav{
     height: 40px;
     background-color: #8F45DE;
     width: 100%;
+    display: flex;
+    padding-left: 10px;
+    justify-content: left;
+    align-items: center;
+}
+.btn-fechar-container div{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #btn-fechar{
     cursor: pointer;
-    width: 40px;
-    height: 40px;
-    background-color: wheat;
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+    transition: .3s ease-in-out;
 }
 #sidebar.mostrar{
     left: 0;
@@ -107,10 +119,10 @@ nav{
 }
 #sidebar-btn{
     cursor: pointer;
-    position: relative;
+    position: absolute;
     top: 50%;
-    transform: translate(-150%,-50%);
-    left: 100%;
+    transform: translate(0,-50%);
+    right: 10%;
     border: 1px solid rgb(117, 117, 117);
     width: 40px;
     height: 40px;

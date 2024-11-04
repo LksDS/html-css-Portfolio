@@ -683,7 +683,7 @@ button:hover {
     }
     #texto-sobre{
         grid-column: 2;
-        width: 83%;
+        width: 70%;
     }
     #projeto-oganitemplate{
         background: url(images/foto-projeto-oganitemplate.png);

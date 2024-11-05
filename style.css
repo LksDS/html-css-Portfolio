@@ -365,6 +365,7 @@ background: linear-gradient(180deg, rgba(92,70,205,1) 0%, rgba(101,77,224,1) 29%
     animation-duration: 1.7s;
     animation-delay: .5s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
  }
  .tecnologia
  .img-container:hover::after{

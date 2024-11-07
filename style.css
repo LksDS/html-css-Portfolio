@@ -659,6 +659,7 @@ button:hover {
         padding-bottom: 10px !important;
         height: fit-content;
         flex-grow: 0 !important;
+        transition: .5s ease-in-out;
     }
     .container-projeto .nome{
         writing-mode: vertical-rl;
@@ -719,6 +720,7 @@ button:hover {
     .container-projeto:hover .container-informacoes{
         padding: 20px !important;
         width: 100%;
+        height: fit-content;
     }
     .container-projeto:hover .nome{
         writing-mode: horizontal-tb;
